@@ -405,10 +405,6 @@ class Window < Gosu::Window
 		}
 	end
 
-	def needs_cursor?
-		true
-	end
-
 	def generic_reset
 		@cubes.each { |cube| cube.rot.x = 0; cube.rot.y = 0; cube.rot.z = 0 }
 		@animation[:function] = nil
@@ -589,12 +585,6 @@ class Window < Gosu::Window
 		end
 		if Gosu.button_down? Gosu::KB_DOWN
 			@camera.rot.x -= 0.1
-		end
-		if Gosu.button_down? Gosu::MS_LEFT
-			x = (self.mouse_x - WINDOW_WIDTH / 2) * 2.0 / WINDOW_WIDTH
-			y = (self.mouse_y - WINDOW_HEIGHT / 2) * 2.0 / WINDOW_HEIGHT
-			@camera.rot.y = -x * Math::PI
-			@camera.rot.x = y * Math::PI
 		end
 		if Gosu.button_down? Gosu::KB_F and @animation[:function] == nil
 			# https://scoutapm.com/blog/how-to-use-lambdas-in-ruby

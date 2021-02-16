@@ -1,6 +1,6 @@
 # RubyRubiksCube
 
-This is a rubik's cube, written in Ruby using the Gosu library for graphics.
+This is a 3D Rubik's Cube, written in Ruby using the Gosu library for graphics.
 
 ## Getting Started
 
